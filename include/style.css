@@ -27,11 +27,11 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: clamp(0.5rem, 20vw, 45rem);
-    padding-right: clamp(0.5rem, 20vw, 45rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     padding-top: 4rem;
 }
 
@@ -64,19 +64,12 @@ h1 {
 h2 {
     font-family: JetBrains Mono, monospace;
     font-weight: 200;
-    font-size: 1.2rem;
-    letter-spacing: -1px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: #707187;
     margin: 0;
 }
-/*
-h4 {
-    font-family: "Inter", "Helvetica", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.4;
-    margin: 0;
-}*/
 
 h5 {
     font-family: "Inter", "Helvetica", sans-serif;
@@ -102,7 +95,7 @@ p {
 }
 
 ::selection {
-  background-color: #EEEDF1;
+  background-color: #ECEDF6;
 }
 
 mark {
@@ -145,7 +138,9 @@ li::marker {
 
 a {
     color: #464656;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #D8D8DF;
+    text-underline-offset: 2px;
     margin: 0 0 0 0;
 }
 
@@ -161,7 +156,7 @@ a:hover {
     cursor: pointer;
 }
 
-button {
+body button {
     text-align: center;
     text-decoration: none;
     margin-top: 2rem;
@@ -176,7 +171,7 @@ button {
     transition: all 0.25s ease-out;
 }
 
-button:hover {
+body button:hover {
     transform: translateY(-2px);
 }
 
@@ -195,9 +190,26 @@ details[open] > summary {
     list-style-type: "-";
 }
 
+/* for large logo
+.big-logo {
+    color: #B6B7C3;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+.big-logo:hover {
+    color: blue;
+}
+
+.big-logo svg {
+     width: 100%;
+     height: auto;
+     display: block;
+} */
+
 .header-pic img {
     border-radius: 100px;
-    width: 4rem;
+    width: 3.5rem;
     margin-right: 1rem;
 }
 
@@ -208,7 +220,7 @@ img {
     display: block;
 }
 
-.sharp-img {
+#sharp-img {
     border-radius: 0px;
 }
 
@@ -258,17 +270,22 @@ section.about div {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    width: 140px; /* Fixed width ensures links start at same position */
+    width: 120px; /* Fixed width ensures links start at same position */
     flex-shrink: 0;
 }
 
 .contact-link {
     position: relative;
+    text-decoration: underline;
+    text-decoration-color: #D8D8DF;
+    text-underline-offset: 2px;
 }
 
 .contact-link:hover {
     cursor: pointer;
     color: #707187;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .tooltip {
@@ -297,8 +314,10 @@ section.about div {
 #work {
     font-family: JetBrains Mono, monospace;
     font-weight: 200;
+    font-size: 0.8rem;
     color: #707187;
-    letter-spacing: -1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: -12px;
 }
 
@@ -406,6 +425,29 @@ div.projoutro {
     background-color: #d1d1db;
 }
 
+/* fade-up animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.5s ease-out both;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
 /* footer */
 footer {
     font-size: 12px;
@@ -415,12 +457,6 @@ footer {
 
 /* media query */
 @media (max-width: 1000px) {
-
-.container {
-    padding-left: clamp(0.5rem, 5vw, 45rem);
-    padding-right: clamp(0.5rem, 5vw, 45rem);
-}
-
 section {
     grid-template-columns: repeat(4, 1fr);
     margin: 24px 0 16px 0;
@@ -444,5 +480,5 @@ div.projoutro {
 }
 
 .contact-label {
-    width: 100px; /* Fixed width ensures links start at same position */
+    width: 80px; /* Fixed width ensures links start at same position */
 }
