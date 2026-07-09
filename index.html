@@ -17,7 +17,7 @@
     <body>
         <div class="container">
             <!-- nav -->
-            <header>
+            <header class="fade-up">
                 <nav>
                     <a href="index.html">
                         <div class="header-pic">
@@ -26,22 +26,22 @@
                     </a>
                     <div>
                         Nella Wong<br />
-                        Currently freelancing
+                        <span style="color: #707187">
+                            Digital & Brand Experience Designer
+                        </span>
                     </div>
                 </nav>
             </header>
 
             <!-- about section -->
-            <section class="about">
+            <section class="about fade-up delay-1">
+                
                 <div>
                     A design generalist with a focus on digital experiences — I
                     design with intention and enjoy working on projects that
                     make me feel like I can move mountains by pushing pixels.
-                    <br />
-
-                    <a href="mailto:nellawongly@gmail.com"
-                        ><button>Email me</button></a
-                    >
+                    Currently designing for skin health & beauty brands at
+                    Kenvue.<br />
 
                     <!-- spacing -->
                     <div id="horizontal-spacing-l"></div>
@@ -51,7 +51,17 @@
             </section>
 
             <!-- work section -->
-            <section class="work">
+            <section class="work fade-up delay-2">
+                <div class="workcard">
+                    <div class="workcard-info">
+                        <a href="zplit.html"
+                            ><img src="images/zplit1.webp" alt=" "
+                        /></a>
+                    </div>
+
+                    <p>The simplest way to split group expenses</p>
+                </div>
+
                 <div class="workcard">
                     <div class="workcard-info">
                         <a href="protected-jj-trumatch.html"
@@ -90,7 +100,7 @@
             <div id="horizontal-spacing-s"></div>
 
             <!-- contact section -->
-            <section class="about">
+            <section class="about fade-up delay-3">
                 <div id="work">Connect</div>
                 <div>
                     If you would like to view a full portfolio deck or discuss
@@ -132,7 +142,9 @@
             <div id="horizontal-spacing-s"></div>
 
             <!-- footer -->
-            <footer>© 2025 Nella Wong</footer>
+            <footer class="fade-up delay-4">
+                © <span id="year"></span> Nella Wong
+            </footer>
             <script src="include/script.js"></script>
         </div>
     </body>
