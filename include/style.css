@@ -469,8 +469,8 @@ div.projoutro {
 @keyframes fadeUp {
         from {
             opacity: 0;
-            transform: translateY(12px);
-            filter: blur(4px);
+            transform: translateY(16px);
+            filter: blur(0px);
         }
         to {
             opacity: 1;
