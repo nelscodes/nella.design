@@ -190,23 +190,6 @@ details[open] > summary {
     list-style-type: "-";
 }
 
-/* for large logo
-.big-logo {
-    color: #B6B7C3;
-    width: 100%;
-    transition: color 0.3s ease;
-}
-
-.big-logo:hover {
-    color: blue;
-}
-
-.big-logo svg {
-     width: 100%;
-     height: auto;
-     display: block;
-} */
-
 .header-pic img {
     border-radius: 100px;
     width: 3.5rem;
@@ -482,3 +465,11 @@ div.projoutro {
 .contact-label {
     width: 80px; /* Fixed width ensures links start at same position */
 }
+
+.fade-up {
+       animation: fadeUp 0.5s ease-out both;
+       -webkit-backface-visibility: hidden;
+       backface-visibility: hidden;
+       -webkit-transform: translateZ(0);
+       will-change: opacity, transform;
+   }
