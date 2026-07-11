@@ -470,7 +470,7 @@ div.projoutro {
         from {
             opacity: 0;
             transform: translateY(12px);
-            filter: blur(6px);
+            filter: blur(4px);
         }
         to {
             opacity: 1;
