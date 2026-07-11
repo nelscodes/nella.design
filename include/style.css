@@ -43,7 +43,7 @@ header {
     left: 0;
 }
 
-header nav {
+header .nav {
     /*background-color: rgba(255, 255, 255, 0.75);
     -webkit-backdrop-filter: blur(40px)!important;
     backdrop-filter: blur(40px);*/
@@ -436,6 +436,70 @@ footer {
     font-size: 12px;
     padding-bottom: 16px;
     margin-top: 1rem;
+}
+
+/* floating bottom nav */
+.floating-nav {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(70, 70, 86, 0.1);
+}
+
+.floating-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #707187;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.floating-nav-item:hover {
+    color: #464656;
+}
+
+.floating-nav-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translate(-50%, 4px);
+    background-color: #464656;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-family: "Inter", "Helvetica", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.floating-nav-item:hover .floating-nav-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
 }
 
 /* media query */

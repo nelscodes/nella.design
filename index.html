@@ -18,7 +18,7 @@
         <div class="container">
             <!-- nav -->
             <header class="fade-up">
-                <nav>
+                <div class="nav">
                     <a href="index.html">
                         <div class="header-pic">
                             <img src="images/mypic2.webp" alt="Home" />
@@ -30,18 +30,20 @@
                             Digital & Brand Experience Designer
                         </span>
                     </div>
-                </nav>
+                </div>
             </header>
 
             <!-- about section -->
             <section class="about fade-up delay-1">
-                
                 <div>
                     A design generalist with a focus on digital experiences — I
                     design with intention and enjoy working on projects that
                     make me feel like I can move mountains by pushing pixels.
                     Currently designing for skin health & beauty brands at
                     Kenvue.<br />
+                    <!-- <a href="mailto:nellawongly@gmail.com"
+                        ><button>Email</button></a
+                    > -->
 
                     <!-- spacing -->
                     <div id="horizontal-spacing-l"></div>
@@ -145,7 +147,24 @@
             <footer class="fade-up delay-4">
                 © <span id="year"></span> Nella Wong
             </footer>
-            <script src="include/script.js"></script>
         </div>
+
+        <!-- floating bottom nav -->
+        <nav class="floating-nav fade-up">
+            <a href="#" class="floating-nav-item">
+                <iconify-icon icon="carbon:home"></iconify-icon>
+                <span class="floating-nav-tooltip">Home</span>
+            </a>
+            <a href="#" class="floating-nav-item">
+                <iconify-icon icon="carbon:user"></iconify-icon>
+                <span class="floating-nav-tooltip">About</span>
+            </a>
+            <a href="#" class="floating-nav-item">
+                <iconify-icon icon="carbon:email"></iconify-icon>
+                <span class="floating-nav-tooltip">Contact</span>
+            </a>
+        </nav>
+
+        <script src="include/script.js"></script>
     </body>
 </html>
