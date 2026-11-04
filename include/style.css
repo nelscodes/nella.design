@@ -228,7 +228,6 @@ video {
 /*Gallery*/
 
 .gallery {
-  padding: 1rem;
   grid-column: 1 / span 12;
   align-items: center;
   display: flex;
@@ -503,20 +502,14 @@ div.projoutro {
 }
 
 .fade-up {
-    animation: fadeUp 0.5s ease-out both;
+    animation: fadeUp 0.5s ease-out backwards;
+    will-change: opacity, transform, filter;
 }
 
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
-
-/* footer */
-footer {
-    font-size: 12px;
-    padding-bottom: 16px;
-    margin-top: 1rem;
-}
 
 /* floating bottom nav */
 .floating-nav {
