@@ -242,6 +242,26 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 
+// fade-up on scroll
+const fadeUpObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    el.style.animationPlayState = 'running';
+    fadeUpObserver.unobserve(el);
+    el.addEventListener('animationend', () => {
+      el.classList.remove('fade-up', 'delay-1', 'delay-2', 'delay-3', 'delay-4');
+      el.style.animationPlayState = '';
+      el.style.willChange = 'auto';
+    }, { once: true });
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach((el) => {
+  el.style.animationPlayState = 'paused';
+  fadeUpObserver.observe(el);
+});
+
 //footer year//
 document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
