@@ -225,6 +225,16 @@ video {
     text-align: center;
 }
 
+/*logo interaction*/
+#logo {
+  width: 115%;
+  aspect-ratio: 75.34 / 26.38;
+  color: #707187;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /*Gallery*/
 
 .gallery {
@@ -282,23 +292,21 @@ video {
 }
 
 .gallery-caption {
+  font-size: 12px;
+  color: #707187;
   margin-top: 20px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 999px;
   background: #EEEDF1;
 }
 
 .gallery-caption-index {
   font-family: JetBrains Mono, monospace;
-  font-size: 0.9rem;
+  font-size: 12px;
   color: #707187;
-}
-
-.gallery-caption-text {
-  font-size: 0.9rem;
 }
 
 section {
@@ -574,6 +582,13 @@ div.projoutro {
     opacity: 1;
     visibility: visible;
     transform: translate(-50%, 0);
+}
+
+/* footer */
+footer {
+    font-size: 12px;
+    padding-bottom: 16px;
+    margin-top: 1rem;
 }
 
 /* media query */
